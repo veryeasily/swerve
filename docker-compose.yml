@@ -1,0 +1,12 @@
+version: "2.4"
+services:
+  app:
+    build:
+      context: ./
+    volumes:
+      - go-cache:/go
+      - ./:/go/src/github.com/elju/swerve
+    ports:
+      - 8080:8080
+volumes:
+  go-cache:
